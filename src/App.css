@@ -1,38 +1,160 @@
-.App {
-  text-align: center;
+* {
+  box-sizing: border-box;
+  outline: none;
+  user-select: none;
+  font-family: "Space Grotesk", Arial, sans-serif;
+  font-size: 14px;
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.container {
+  /* background-color: #ddd; */
   display: flex;
+  height: 100vh;
   flex-direction: column;
+}
+.brand {
+  color: #f2f2f2;
+  font-weight: 600;
+  font-size: 1.5rem;
+  display: flex;
   align-items: center;
+  height: 100%;
+  padding: 1rem;
+}
+.sidebar {
+  background-color: #f2f2f2;
+  display: flex;
+  flex: 0.2;
+  border-right: 1px solid #ddd;
+  flex-direction: column;
+}
+.content {
+  flex: 0.96;
+  flex-wrap: wrap;
+}
+.header {
+  height: 4rem;
+  box-shadow: 0px 0px 4px #ddd;
+  z-index: 2;
+  background-color: #48484a;
+  display: flex;
+  justify-content: space-between;
+  padding: 0 2rem;
+  align-items: center;
+}
+.dropdown {
+  background-color: #fff;
+  border-radius: 0.2rem;
+  padding: 0.5rem 1rem;
+  position: relative;
+  font-weight: 600;
+}
+.dropdown-menu {
+  display: none;
+  position: absolute;
+  width: max-content;
+  background-color: #fff;
+  right: 0;
+  top: 2.2rem;
+  border-radius: 0.2rem;
+  padding: 0.5rem 0.5rem;
+  box-shadow: 0px 0px 4px #d2d2d2;
+  box-sizing: content-box;
+  max-height: 10rem;
+  overflow: auto;
+}
+.dropdown:hover .dropdown-menu {
+  display: block;
+}
+.menu-item {
+  padding: 0.5rem;
+  border-bottom: 1px solid #d5d5d5;
+  cursor: pointer;
+  box-sizing: content-box;
+  font-weight: 600;
+  color: #48484a;
+}
+.menu-item:hover,.menu-item.active {
+  background-color: #a0a6ab;
+  color: #fff;
+}
+.wrapper {
+  display: flex;
+  flex: 1;
+}
+.item {
+  font-family: "Space Grotesk", Arial, sans-serif;
+  font-size: 14px;
+  font-weight: 600;
+  padding: 1rem 1rem;
+  color: #48484a;
+  border-radius: 0.2rem;
+  margin-bottom: 0.2rem;
+  cursor: pointer;
+  margin: 0.1rem 0.5rem;
+}
+.item.item-header {
+  margin: 0.2rem 0;
+  border-bottom: 1px solid #ced4da;
+  display: flex;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  font-size: 1rem;
+  cursor: unset;
+}
+.item.active {
+  background-color: #a0a6ab;
+  color: #fff;
+}
+.item-cuaca-container {
+  display: flex;
+  padding: 1rem 0 0 1rem;
+  float: left;
+  padding-bottom: 0;
+  flex-wrap: wrap;
+  overflow: auto;
+}
+.item-cuaca {
+  width: 32%;
+  margin: 0rem 1rem 1rem 0;
+  display: flex;
+  background-color: teal;
+  padding: 2rem 1rem;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  border-radius: 0.5rem;
+}
+.item-icon {
+  display: flex;
+  margin:-2rem;
+  justify-content: center;
+  padding-bottom: 1rem;
 }
 
-.App-link {
-  color: #61dafb;
+.under-construction {
+  display: flex;
+  align-items: center;
+  height: 100%;
+  justify-content: center;
+  color: #ced4da;
+  font-weight: 700;
+  font-size: 2rem;
+}
+.item-text {
+  color: #fff;
+  font-weight: 600;
+  padding-bottom: 1rem;
+}
+.item-content {
+  display: flex;
+  width: 100%;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.temperature div {
+  text-transform: capitalize;
+  padding: 0.2rem 1rem;
+  color: #fff;
+  font-weight: 600;
+  padding-left: 2rem;
+  float: left;
+  width: 50%;
 }
